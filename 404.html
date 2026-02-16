@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - You Grabbed Nothing!</title>
+    <style>
+        body {
+            background-color: #0c0c0c;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .glitch {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ff8c00;
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                         -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                         0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 500ms infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75); }
+            15% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75); }
+            49% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75); }
+            50% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75); }
+            99% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75); }
+            100% { text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75); }
+        }
+
+        .penguin {
+            font-size: 5rem;
+            animation: bounce 2s infinite ease-in-out;
+            cursor: help;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #7dd3fc;
+            margin: 20px 0;
+        }
+
+        .back-home {
+            padding: 10px 20px;
+            background: #ff8c00;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background: #7dd3fc;
+            transform: scale(1.1);
+        }
+
+        .error-log {
+            font-size: 0.8rem;
+            opacity: 0.3;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glitch">404</div>
+    
+    <div class="penguin">🐧</div>
+
+    <p>ERROR: File not grabbed.<br>The penguin ran away with the data.</p>
+
+    <a href="/" class="back-home">GO BACK HOME</a>
+
+    <div class="error-log">
+        [SYSTEM_CRITICAL]: fgrab process failed because this page doesn't exist.<br>
+        Stop looking at the penguin. It's awkward.
+    </div>
+
+</body>
+</html>
